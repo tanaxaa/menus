@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        .menu-container {
+            text-align: center;
+            margin: 50px;
+        }
+
+        label {
+            font-size: 18px;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        select {
+            font-size: 16px;
+            padding: 10px;
+            width: 100%;
+            max-width: 300px;
+            box-sizing: border-box;
+        }
+
+        /* Estilos adicionales según sea necesario */
+    </style>
+    <title>Menú Desplegable</title>
+</head>
+<body>
+
+    <div class="menu-container">
+        <label for="pdf-dropdown">Seleccionar PDF:</label>
+        <select id="pdf-dropdown" onchange="openPdf(this.value)">
+            <option value="#" selected disabled>Seleccione un PDF</option>
+            <option value="https://drive.google.com/file/d/1oe9dsIC-Crwoin-QbP-RjX8lE1-qaf_c/view?usp=sharing">Documento 1</option>
+            <option value="https://drive.google.com/file/d/1K-lTpFl2OX-G0uX3bKCrhtL9MRMw8152/view?usp=sharing">Documento 2</option>
+            <!-- Añadir más opciones según sea necesario -->
+        </select>
+    </div>
+
+    <script>
+        function openPdf(url) {
+            if (url !== "#") {
+                window.open(url, '_blank');
+            }
+        }
+    </script>
+
+</body>
+</html>
